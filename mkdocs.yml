@@ -12,11 +12,9 @@ theme:
     - search.share
     - toc.integrate
 plugins:
-  - search:
-      lang: zh
-  - tags:
-      tags_file: tags.md
-  - pagelist   # 添加这行来启用插件
+  - search
+  - tags
+  - pagelist
 nav:
   - 首页: index.md
   - 2022真题:
@@ -55,10 +53,9 @@ nav:
       - 全国乙卷: 2025/全国乙卷/index.md
       - 新课标卷: 2025/新课标卷/index.md
       - 山东卷: 2025/山东卷/index.md
-  - 题库分类:
-      - 按知识点: tags.md
-  - 关于本站: about.md
-
+  - 多维筛选: search.md
+  - 按知识点: by-topic.md   # 如果你有之前的按主题页面
+  - 标签索引: tags.md
 markdown_extensions:
   - admonition
   - pymdownx.details
