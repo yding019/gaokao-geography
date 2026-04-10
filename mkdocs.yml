@@ -1,0 +1,34 @@
+site_name: 高考地理题库
+site_description: 2023-2025地理高考题目检索题库
+site_author: 自用
+
+# mkdocs.yml 正确配置
+theme:
+  name: material
+  language: zh  # 这里用 zh，不是 zh-CN
+  features:
+    - navigation.expand
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+    - navigation.top
+  palette:
+    - scheme: default
+      primary: indigo
+
+# 左侧导航——干净简洁，不挂载question题库
+nav:
+  - 首页: index.md
+  - 标签检索: tags.md
+
+plugins:
+  - search:
+      lang: zh
+  - tags:
+      tags_file: tags.md
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
