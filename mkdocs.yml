@@ -34,7 +34,7 @@ nav:
       - 福建卷: 2022/福建卷/index.md
       - 浙江卷: 2022/浙江卷/index.md
       - 上海卷: 2022/上海卷/index.md
-- 2023真题:
+  - 2023真题:
       - 全国甲卷: 2023/全国甲卷/index.md
       - 全国乙卷: 2023/全国乙卷/index.md
       - 新课标卷: 2023/新课标卷/index.md
@@ -54,7 +54,7 @@ nav:
       - 新课标卷: 2025/新课标卷/index.md
       - 山东卷: 2025/山东卷/index.md
   - 多维筛选: search.md
-  - 按知识点: by-topic.md   # 如果你有之前的按主题页面
+  - 按知识点: by-topic.md
   - 标签索引: tags.md
 markdown_extensions:
   - admonition
