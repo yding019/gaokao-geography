@@ -1,34 +1,71 @@
 site_name: 高考地理题库
-site_description: 2023-2025地理高考题目检索题库
-site_author: 自用
+site_url: https://yijia.uk/
+site_description: 高考地理题库 | 分类刷题 | 标签检索
+site_author: yding019
 
-# mkdocs.yml 正确配置
+# 主题（最稳定、最漂亮）
 theme:
   name: material
-  language: zh  # 这里用 zh，不是 zh-CN
+  language: zh
+  font:
+    text: Noto Sans SC
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: 切换至深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: 切换至浅色模式
   features:
-    - navigation.expand
+    - navigation.tabs
     - navigation.sections
+    - navigation.expand
+    - navigation.top
     - search.suggest
     - search.highlight
-    - navigation.top
-  palette:
-    - scheme: default
-      primary: indigo
+    - toc.integrate
 
-# 左侧导航——干净简洁，不挂载question题库
-nav:
-  - 首页: index.md
-  - 标签检索: tags.md
-
+# 插件（搜索 + 标签检索，自带，不用安装）
 plugins:
   - search:
       lang: zh
   - tags:
       tags_file: tags.md
+      tag_icon: material/label
 
+# 导航菜单（你可以自己改顺序）
+nav:
+  - 🏠 首页: index.md
+  - 🔍 标签检索: tags.md
+  - 📚 自然地理:
+      - 地球与地图: 自然地理/地球与地图.md
+      - 气候: 自然地理/气候.md
+      - 水文: 自然地理/水文.md
+  - 🌍 人文地理:
+      - 人口: 人文地理/人口.md
+      - 城市: 人文地理/城市.md
+      - 农业: 人文地理/农业.md
+  - ⚙️ 区域可持续发展:
+      - 区域生态: 区域/生态.md
+      - 资源利用: 区域/资源.md
+
+# 扩展 markdown 功能
 markdown_extensions:
-  - attr_list
-  - md_in_html
+  - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - toc:
+      permalink: true
+      title: 目录
